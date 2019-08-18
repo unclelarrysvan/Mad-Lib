@@ -1,0 +1,53 @@
+name = input("Give me a character name: ")
+favorite_teacher = input("Name of your favorite teacher: ")
+swear_word = input("Favorite swear word: ")
+number = input("Pick a whole number, any whole number: ")
+plural_object = input("What about an object, but make it plural: ")
+store_name = input("First store name that comes to mind: ")
+body_part = input("How about a body part: ")
+silly_word = input("Best silly word ever: ")
+holiday = input("Name a holiday: ")
+movie_title = input("Name a movie title: ")
+verb = input("Name a verb ending in ING: ")
+distance = input("Write a distance: ")
+country = input("Country: ")
+animal = input("Wild animal: ")
+quote = input("Pick a famous movie quote (in quotes): ")
+body_part2 = input("How about a different body part: ")
+song = input("Name a children's song: ")
+adjective = input("What is a strong adjective: ")
+print(" ")
+print(" ")
+print(" ")
+print("Alright! Thanks for the input!  Now it's time for your very own personalized story!")
+print(" ")
+print(" ")
+print(" ")
+print("Detective " + name.title() + ": Hi!  I'm Detective " + name.title() + ".  And you are!?")
+print(favorite_teacher.title() + ": " + favorite_teacher.title() + ".")
+print("Detective " + name.title() + ": You're here today on the suspicion of second degree robbery.")
+print(favorite_teacher.title() + ": " + swear_word.capitalize() + "!")
+print("Detective " + name.title() + ": That's right! " + number + " " + plural_object.lower() + " were stolen from "
+      + store_name + ". And the crime scene has your " + body_part.lower() + " written all over it!")
+print(favorite_teacher.title() + ": That is " + silly_word.lower() + "!")
+print("Detective " + name.title() + ": Where were you on the night of " + holiday.title() + "?")
+print(favorite_teacher.title() + ": I was watching " + movie_title.title() + " on my couch at home.")
+print("Detective " + name.title() + ": Then why did the security camera footage show you " + verb.lower() + " just "
+      + distance.lower() + " away from the crime scene!  Alright, alright.  I'm done with playing games.  Where are you from?")
+print(favorite_teacher.title() + ": " + country.title() + "")
+print("Detective " + name.title() + ": Just as I suspected.  You know, one of the best parts of being a detective"
+                                    "is that I get to lock up criminals like you.  Then I go home to my children and ")
+print("       my pet " + animal.lower() + " and say, " + quote.title() + "!")
+print(favorite_teacher + ": Fine! I did it! But I only did it because I needed the money to buy myself "
+      + body_part2 + " implants.")
+print("Detective " + name.title() + ": I knew it all along. And when I solve a crime, I sing my favorite song of "
+                                    "all time; " + song.title() + ".")
+print(favorite_teacher.title() + ": You have a " + adjective.lower() + " voice! I love it! You inspired me to change!")
+
+print(" ")
+print(" ")
+print(" ")
+print("The End")
+
+
+
