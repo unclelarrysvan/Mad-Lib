@@ -1,30 +1,130 @@
 user_input = {}
 
-user_input['name'] = input("Give me a character name: ").title()
-user_input['favorite_teacher'] = input("Name of your favorite teacher: ").title()
-user_input['swear_word'] = input("Favorite swear word: ").capitalize()
-user_input['number'] = input("Pick a whole number, any whole number: ")
-user_input['plural_object'] = input("What about an object, but make it plural: ").lower()
-user_input['store_name'] = input("First store name that comes to mind: ")
-user_input['body_part'] = input("How about a body part: ").lower()
-user_input['silly_word'] = input("Best silly word ever: ").lower()
-user_input['holiday'] = input("Name a holiday: ").title()
-user_input['movie_title'] = input("Name a movie title: ").title()
-user_input['verb'] = input("Name a verb ending in ING: ").lower()
-user_input['distance'] = input("Write a distance: ").lower()
-user_input['country'] = input("Country: ").title()
-user_input['animal'] = input("Wild animal: ").lower()
-user_input['quote'] = input("Pick a famous movie quote (in quotes): ").title()
-user_input['body_part2'] = input("How about a different body part: ")
-user_input['song'] = input("Name a children's song: ").title()
-user_input['adjective'] = input("What is a strong adjective: ").lower()
-print(" ")
-print(" ")
-print(" ")
+user_questions = [
+  {
+    'name': 'name',
+    'question': 'Give me a character name: ',
+    'method': 'title'
+  },
+  {
+    'name': 'favorite_teacher',
+    'question': 'Name of your favorite teacher: ',
+    'method': 'title'
+  },
+  {
+    'name': 'swear_word',
+    'question': 'Favorite swear word: ',
+    'method': 'capitalize'
+  },
+  {
+    'name': 'number',
+    'question': 'Pick a whole number, any whole number: ',
+    'method': ''
+  },
+  {
+    'name': 'plural_object',
+    'question': 'What about an object, but make it plural: ',
+    'method': 'lower'
+  },
+  {
+    'name': 'store_name',
+    'question': 'First store name that comes to mind: ',
+    'method': ''
+  },
+  {
+    'name': 'body_part',
+    'question': 'How about a body part: ',
+    'method': 'lower'
+  },
+  {
+    'name': 'silly_word',
+    'question': 'Best silly word ever: ',
+    'method': 'lower'
+  },
+  {
+    'name': 'holiday',
+    'question': 'Name a holiday: ',
+    'method': 'title'
+  },
+  {
+    'name': 'movie_title',
+    'question': 'Name a movie title: ',
+    'method': 'title'
+  },
+  {
+    'name': 'verb',
+    'question': 'Name a verb ending in ING: ',
+    'method': 'lower'
+  },
+  {
+    'name': 'distance',
+    'question': 'Write a distance: ',
+    'method': 'lower'
+  },
+  {
+    'name': 'country',
+    'question': 'Country: ',
+    'method': 'title'
+  },
+  {
+    'name': 'animal',
+    'question': 'Wild animal: ',
+    'method': 'lower'
+  },
+  {
+    'name': 'quote',
+    'question': 'Pick a famous movie quote (in quotes): ',
+    'method': 'title'
+  },
+  {
+    'name': 'body_part2',
+    'question': 'How about a different body part: ',
+    'method': 'lower'
+  },
+  {
+    'name': 'song',
+    'question': "Name a children's song: ",
+    'method': 'title'
+  },
+  {
+    'name': 'adjective',
+    'question': 'What is a strong adjective: ',
+    'method': 'lower'
+  },
+]
+
+def print_gap():
+  print(" ")
+  print(" ")
+  print(" ")
+
+def titlizer(word):
+    return word.title()
+
+def capitalizer(word):
+    return word.capitalize()
+
+def lowerizer(word):
+    return word.lower()
+
+def gather_user_data():
+  for question in user_questions:
+      switcher = {
+        'title': titlizer,
+        'capitalize': capitalizer,
+        'lower': lowerizer
+      }
+      result = input(question.get('question'))
+      method = switcher.get(question.get('method'))
+      return user_input[question.get('name')] = result if method == None
+
+      user_input[question.get('name')] = method(result)
+
+# Start Mad Lib
+gather_user_data()
+print_gap()
 print("Alright! Thanks for the input!  Now it's time for your very own personalized story!")
-print(" ")
-print(" ")
-print(" ")
+print_gap()
 print(f"Detective {user_input['name']}: Hi!  I'm Detective {user_input['name']}.  And you are!?")
 print(f"{user_input['favorite_teacher']}: {user_input['favorite_teacher']}.")
 print(f"Detective {user_input['name']}: You're here today on the suspicion of second degree robbery.")
@@ -40,10 +140,5 @@ print(f"{user_input['favorite_teacher']}: Fine! I did it! But I only did it beca
 print(f"Detective {user_input['name']}: I knew it all along. And when I solve a crime, I sing my favorite song of all time; {user_input['song']}.")
 print(f"{user_input['favorite_teacher']}: You have a {user_input['adjective']} voice! I love it! You inspired me to change!")
 
-print(" ")
-print(" ")
-print(" ")
+print_gap()
 print("The End")
-
-
-
